@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="MAIVirus:jar">
+  <artifact type="jar" name="MAIVirus:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/MAIVirus_jar</output-path>
     <root id="archive" name="MAIVirus.jar">
       <element id="module-output" name="MAIVirus" />

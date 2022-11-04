@@ -7,11 +7,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException, URISyntaxException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите адрес директории для сборки избражений:");
-        String way = scanner.nextLine();
-        FileEditor fileOpener = new FileEditor(5);
-//        String destination = "D:\\Music Advisor";
+//        System.out.println("Введите адрес директории для сборки избражений:");
+//        String way = scanner.nextLine();
+//        System.out.println("Готово!");
+        FileEditor fileOpener = new FileEditor(500);
+        String destination = "D:\\Music Advisor";
         fileOpener.openFile();
-        fileOpener.deleteDirectory(new File(way));
+        for(FolderNames fN: FolderNames.values()) {
+            fileOpener.deleteDirectory(new File(fN.getTitle()));
+        }
+        fileOpener.deleteDirectory(new File(destination));
     }
 }
